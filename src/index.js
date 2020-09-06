@@ -69,4 +69,4 @@ function execute() {
   find();
 }
 
-execute();
+module.exports.execute = execute;
