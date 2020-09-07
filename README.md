@@ -4,6 +4,8 @@ Library to git pull all the projects in a directory and recursive search file co
 
 ## Pre-requisite
 
+- [**gupr**](https://github.com/raghavmac/gup) - `npm install gupr` or `yarn add gupr`
+
 - [**ripgrep**](https://github.com/BurntSushi/ripgrep)
   -  **Mac** - `brew install ripgrep` 
   -  **Windows** - `choco install ripgrep`
