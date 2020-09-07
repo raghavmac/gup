@@ -1,12 +1,11 @@
 {
-  "name": "gup",
+  "name": "gupr",
   "version": "1.0.0",
   "main": "build/index.js",
   "license": "MIT",
   "module": "src/index.js",
   "bin": {
-    "gup": "./bin/gup.js",
-    "gupr": "./bin/gup.js"
+    "gupr": "./bin/gupr.js"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=dev node src/index.js",

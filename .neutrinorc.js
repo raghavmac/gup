@@ -9,7 +9,7 @@ module.exports = {
   use: [
     airbnbBase(),
     library({
-      name: 'gup'
+      name: 'gupr'
     }),
     jest(),
   ],

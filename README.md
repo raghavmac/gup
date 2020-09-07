@@ -1,4 +1,4 @@
-# gup
+# gupr
 
 Library to git pull all the projects in a directory and recursive search file contents using ripgrep.
 
@@ -10,16 +10,16 @@ Library to git pull all the projects in a directory and recursive search file co
 
 ## Usage
 
-`gup` or `gupr` - command to git pull all the git projects from current directory
+`gupr` - command to git pull all the git projects from current directory
 
-`gup --find <search_query>` or `-f` - recursive search across files and folders
+`gupr --find <search_query>` or `-f` - recursive search across files and folders
 
-`gup --no-pull -f 'search query'` or `-n` - skip git pull if already done
+`gupr --no-pull -f 'search query'` or `-n` - skip git pull if already done
 
 ## Development
 
 ```sh
-git clone https://github.com/raghavmac/gup.git
+git clone https://github.com/raghavmac/gupr.git
 yarn
 ```
 or `npm install` as alternative

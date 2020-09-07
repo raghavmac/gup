@@ -37,6 +37,7 @@ async function open(directory) {
     const repository = await Git.Repository.open(`${currentDirectory}/${directory}/.git`);
     await repository.fetchAll(options);
     await repository.mergeBranches('master', 'origin/master');
+    spinner.succeed(directory);
   } catch (error) {
     spinner.fail(directory);
   }
@@ -50,7 +51,6 @@ async function git() {
     await Promise
       .all(directories().map(async (directory) => {
         await open(directory);
-        spinner.succeed(directory);
       }))
       .finally(() => spinner.clear());
   }
@@ -60,12 +60,12 @@ async function find() {
   const query = args['--find'];
   if (query) {
     spinner.info(`Searching: ${query}\n`);
-    execa('rg', [query]).stdout.pipe(process.stdout);
+    execa('rg', ['-S', query]).stdout.pipe(process.stdout);
   }
 }
 
-function execute() {
-  git();
+async function execute() {
+  await git();
   find();
 }
 

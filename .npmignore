@@ -1,0 +1,7 @@
+# Files
+*.config.*
+.*.js
+.eslintcache
+
+# Directories
+test
